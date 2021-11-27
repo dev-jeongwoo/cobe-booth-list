@@ -1,12 +1,15 @@
 const inputOption = document.querySelector('#option');
 const inputKeyword = document.querySelector('#keyword');
 
-const btnSearch = document.querySelector('#btnSearch')
+const form = document.querySelector('form');
 
 const tbody = document.querySelector('tbody');
 const trArr = document.querySelectorAll('tbody tr');
 
-btnSearch.addEventListener('click', () => {
+form.addEventListener('submit', onSearch);
+
+function onSearch(e) {
+  e.preventDefault();
   const option = inputOption.value;
   const keyword = inputKeyword.value;
 
@@ -25,4 +28,4 @@ btnSearch.addEventListener('click', () => {
   });
 
   keyword.value = '';
-});
+}
