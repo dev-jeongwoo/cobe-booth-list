@@ -6,7 +6,6 @@
   "scripts": {
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://dev-jeongwoo.github.io/cobe-booth-list/",
   "keywords": [],
   "author": "",
   "license": "ISC",
