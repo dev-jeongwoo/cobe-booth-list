@@ -18,7 +18,12 @@ function onSearch(e) {
     if (text.toLowerCase().includes(keyword.toLowerCase())) {
       return tr;
     }
+  }).sort((a, b) => {
+    const strA = a.querySelector(`td:nth-child(${option})`).textContent;
+    const strB = b.querySelector(`td:nth-child(${option})`).textContent;
+    return strA.localeCompare(strB);
   });
+
 
   console.log(newTrArr);
 
